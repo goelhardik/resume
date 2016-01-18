@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+% 
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Hardik}{Goel}{ \urlstyle{same}\url{}
+\href{mailto:goelx033@umn.edu}{goelx033@umn.edu} | 612.532.4261\\
+}
+\vspace{\topsep}
+{\fontspec[Path = fonts/lato/]{Lato-Bol}\selectfont\bfseries\href{https://www.linkedin.com/in/hardikgoel}{https://www.linkedin.com/in/hardikgoel}}\\
+\vspace{\topsep}
+{\fontspec[Path = fonts/lato/]{Lato-Bol}\selectfont\href{https://github.com/goelhardik/}{https://github.com/goelhardik/}}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     EXPERIENCE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Cisco Systems}
+\descript{| Software Engineer }
+\location{July 2011 – August 2015 | Bangalore, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked as a firmware engineer on an I/O Virtualized, Converged Network Adapter, which is part of a Data Center solution - UCS (Unified Compute Servers).
+\item Worked on iSCSI boot, allowing servers to remotely boot from a central NetApp/EMC
+storage array. Resolved timing issues to fix Linux crashes and added support for booting multiple hosts.
+\item Worked on board bring-up for new network adapters, programming new chips and adding new network speeds.
+\item Created a tool in python for debugging of adapter issues. The tool accepted XML file with commands and generated results using expect scripts.
+\item Worked on the re-factoring of CLI based tool for configuration of the adapter from the UCS Manager over the network. This also enabled multi-host configuration on the adapter.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     EDUCATION
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\runsubsection{University of Minnesota}
+\descript{| MS in Computer Science}
+\location{Expected May 2017 | Twin-Cities, MN } GPA: 4.0 / 4.0\\
+
+\textbullet{} Advanced Algorithms and Data Structures \textbullet{} Matrix Theory
+\textbullet{} Artificial Intelligence I
+\textbullet{} \\
+\textbullet{} Teaching Assistant for undergrad Operating Systems.
+\sectionsep
+
+\runsubsection{Indian Institute of Technology, Roorkee}
+\descript{| BTech in Electronics \& Communication Engg.}
+\location{May 2011 | Roorkee, India}
+GPA: 7.6 / 10.0\\
+\textbullet{} Digital Signal Processing 
+\textbullet{} Digital Communication
+\textbullet{} Data Structures and Algorithms
+\textbullet{} Mathematics
+\textbullet{} Computer Networks
+\textbullet{} Computer Architecture
+\textbullet{} Database Management
+\textbullet{}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Optical Character Recognition for handwritten Hindi script}
+\location{ | \space\space Jan 2011 – May 2011}
+Worked in a team of three to develop a complete Optical Character Recognition system for handwritten Hindi script.This involved the use of
+techniques of image enhancement, segmentation and feature extraction (adapted to work best for Hindi text). Used Zernike Moments and Center of Mass as features for a static database.\\
+\textbullet{} MATLAB \textbullet{}
+\sectionsep
+
+\runsubsection{Othello Bot}
+\location{ | \space\space December 2015}
+Developed an AI to play the game of Othello. Implemented adversary search algorithms such as Minimax and Alpha-Beta Pruning, along with a lot of heuristic based scoring, spcific to Othello.\\
+Also made a simple {\fontspec[Path = fonts/lato/]{Lato-Bol}\selectfont\bfseries{\href{http://tictactoeapp.herokuapp.com/}{Tic Tac Toe}}} game for humans to play against an unbeatable bot.\\
+\textbullet{} Python \textbullet{} HTML \textbullet{} CSS \textbullet{} Javascript \textbullet{} Flask \textbullet{}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\begin{minipage}[t]{.9\textwidth}
+\subsection{Programming}
+\begin{minipage}[t]{.2\textwidth}
+\location{Comfortable:}
+\textbullet{} Python \textbullet{} Matlab \textbullet{} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.7\textwidth}
+\location{Rusty/Familiar:}
+\textbullet{} C \textbullet{} Shell \textbullet{} Javascript \textbullet{} CSS \textbullet{} HTML \textbullet{} Lisp \textbullet{} \LaTeX\ \textbullet{}
+\end{minipage}
+\sectionsep
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Cisco Achievement Program (CAP) award (2x) for identifying and handling release-critical issues.
+\item All India Rank 997 in IIT-JEE 2007 (Joint Entrance Examination) among ~300,000 candidates.
+\end{tightemize}
+\sectionsep
+\end{document}  \documentclass[]{article}
